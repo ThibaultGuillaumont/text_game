@@ -1,0 +1,86 @@
+{
+  "1": {
+    "type" : "text",
+    "html" : "Quiters don't swim,"
+  },
+  "2": {
+    "type" : "text",
+    "html" :"L'appel de la piscine, voilà ce qui touche. Une envie de vous lancer dans un nouveau sport. Un qu'on ferait dans l'eau, sans transpirer"
+  },
+  "3": {
+    "type" : "text",
+    "html" :"Mais, aller à la piscine, ce n'est pas toujours simple. Il faut avoir le bon matériel, au bon moment. Ce n'est pas une chance donnée à tout le monde"
+  },
+  "4": {
+    "type" : "text",
+    "html" :"<br/>Alors, bienvenue dans le simulateur ultime des piscines. Toutes les piscines."
+  },
+  "5":{
+    "type" : "text",
+    "html" :"On va pourvoir se jetter <span style='color:blue'>à l'eau</span>. Probablement. Si vous êtes fort"
+  },
+  "6": {
+    "type" : "text",
+    "html" :"Pret pour l'aventure ?"
+  },
+  "7": {
+    "type" : "choice",
+    "choice" :{ "1" : {"text" : "OUI", "goto" : 10}, "2" : {"text" : "NON", "goto" : 8} },
+    "html" : "<br/>"
+  },
+  "8": {
+    "type" : "text",
+    "html" :"<br/>Il ne faut pas avoir peur de partir à la <span style='color:blue'>piscine</span> ! <br/>"
+  },
+
+  "9": {
+    "type" : "text",
+    "html" :"En plus, y'a une super balnéo. Allé,",
+    "goto" : 7
+  },
+  "10": {
+    "type" : "text",
+    "html" : "Cool<br/> Voilà un très bon début !"
+  },
+  "11": {
+    "type" : "choice",
+    "choice" :{
+      "1" : {"text" : "Aller à la Piscine !", "goto" : 14},
+      "2" : {"text" : "Consulter l'heure", "goto" : 12},
+      "3" : {"text" : "Consulter les horaires", "goto" : 15 }
+    },
+    "html" : "Alors, qu'est ce qu'on fait maintenant ?"
+  },
+  "12" : {
+    "type" : "event",
+    "event": "clock_reveal()"
+  },
+  "13":{
+    "type" : "text",
+    "html" : "<br/>heeeeeey, j'ai une horloge ?!",
+    "goto" : 11
+  },
+  "14":{
+    "type" : "event",
+    "event" : "piscine_check()"
+  },
+  "15":{
+    "type" : "text",
+    "html" : "Lundi : 8h - 8h30 | 10h30 - 17h <br/> Mardi : 9h - 13h30 | 15h30 - 17h30 <br/> Mercredi : 8h - 12h30 | 15h30 - 17h <br/> Jeudi : 8h - 9h20 | 12h30 - 15h <br/>  Vendredi : 9h - 12h | 14h30 - 16h <br/>  Samedi: fermé <br/>  Dimanche :10h - 12h30 | 14h30 - 14h45 <br/>"
+  },
+  "16":{
+    "type" : "text",
+    "html" : "<br/>..."
+  },
+  "17":{
+    "type" : "text",
+    "html" : "<br/>Mais c'est n'importe quoi ces horaires !",
+    "goto" : 11
+  },
+
+  "666":{
+    "type" : "text",
+    "html" : "<br/>Nan mais vas-y, te gènes pas. Le jeu est même pas fini et toi, tout ce qui t'interesses, c'est d'aller à la piscine.<br/> Sérieux. Tout ce que tu as, c'est vaguement une horloge quoi, et encore !<br/> T'as même pas de maillot de bain ! On sais même pas si c'est ouvert.<br/> Méchant Boudou, méchant <br/>",
+    "goto" : 1
+  }
+}
